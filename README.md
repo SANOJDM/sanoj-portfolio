@@ -44,8 +44,10 @@ NEXT_PUBLIC_SITE_URL=           # https://your-domain.com, no trailing slash
 Without the Web3Forms key the contact form validates and then reports that the
 form is not configured yet.
 
-`NEXT_PUBLIC_SITE_URL` is used by `sitemap.xml`, `robots.txt` and the Open Graph
-tags. It falls back to `https://sanoj-portfolio.vercel.app`.
+`NEXT_PUBLIC_SITE_URL` is optional on Vercel: the app reads
+`VERCEL_PROJECT_PRODUCTION_URL` at build time, so sitemap, robots and Open Graph
+URLs resolve to the deployment domain automatically. Set it only when you attach
+a custom domain.
 
 ## Structure
 
@@ -85,6 +87,21 @@ support (no WebGL loops, no marquee, no wipes).
 
 ## Deploy
 
-Static-friendly Next.js app; deploys to Vercel as-is. Set the two environment
-variables above, then point `NEXT_PUBLIC_SITE_URL` at the final domain and
-redeploy so the sitemap and Open Graph URLs are absolute.
+This is a standard Next.js app, so Vercel builds it with no extra configuration.
+
+**Option A — CLI**
+
+```bash
+npm i -g vercel
+vercel login
+vercel --prod
+```
+
+**Option B — Git**
+
+Push the repository to GitHub, then import it at
+[vercel.com/new](https://vercel.com/new). Every push to `main` redeploys.
+
+After the first deploy, add `NEXT_PUBLIC_WEB3FORMS_KEY` under
+**Project → Settings → Environment Variables** to enable the contact form, then
+redeploy. `NEXT_PUBLIC_SITE_URL` is only needed for a custom domain.
