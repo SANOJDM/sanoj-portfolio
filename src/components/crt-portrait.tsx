@@ -3,6 +3,7 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useSyncExternalStore } from "react";
+import { PORTRAIT_CRT } from "@/lib/assets";
 import { getTier, subscribeTier } from "@/lib/settings";
 
 const CrtCanvas = dynamic(() => import("./crt-canvas"), {
@@ -36,7 +37,7 @@ export default function CrtPortrait() {
   return (
     <div className="crt-portrait" data-ready="true" data-static="true">
       <Image
-        src="/images/portrait-crt.webp"
+        src={PORTRAIT_CRT}
         alt=""
         fill
         sizes="(max-width: 768px) 92vw, (max-width: 1180px) 62vw, 47vw"

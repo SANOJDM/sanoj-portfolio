@@ -22,8 +22,21 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "online-food-ordering-system",
+    slug: "multimodal-ai-intelligence-system",
     index: "01",
+    title: "MULTIMODAL AI INTELLIGENCE SYSTEM",
+    category: "AI APPLICATION",
+    meta: ["AI APPLICATION", "FULL-STACK", "2026"],
+    description:
+      "A Next.js app that uses Google's Gemini to work with different kinds of input in one place.",
+    tags: ["NEXT.JS", "GEMINI", "AI"],
+    // Drop /images/projects/multimodal-ai.png in and point here.
+    image: null,
+    href: null,
+  },
+  {
+    slug: "online-food-ordering-system",
+    index: "02",
     title: "ONLINE FOOD ORDERING SYSTEM",
     category: "WEB APPLICATION",
     meta: ["WEB APPLICATION", "FULL-STACK", "2026"],
@@ -36,7 +49,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "student-management-system",
-    index: "02",
+    index: "03",
     title: "STUDENT MANAGEMENT SYSTEM",
     category: "WEB APPLICATION",
     meta: ["WEB APPLICATION", "FULL-STACK", "2026"],
@@ -44,19 +57,6 @@ export const PROJECTS: Project[] = [
       "A Flask-based system for managing student records, with JWT login and a plain HTML/JS frontend.",
     tags: ["FLASK", "JWT", "HTML/JS"],
     // Drop /images/projects/student-management.png in and point here.
-    image: null,
-    href: null,
-  },
-  {
-    slug: "multimodal-ai-intelligence-system",
-    index: "03",
-    title: "MULTIMODAL AI INTELLIGENCE SYSTEM",
-    category: "AI APPLICATION",
-    meta: ["AI APPLICATION", "FULL-STACK", "2026"],
-    description:
-      "A Next.js app that uses Google's Gemini to work with different kinds of input in one place.",
-    tags: ["NEXT.JS", "GEMINI", "AI"],
-    // Drop /images/projects/multimodal-ai.png in and point here.
     image: null,
     href: null,
   },

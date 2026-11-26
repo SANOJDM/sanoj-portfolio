@@ -6,9 +6,9 @@ const BIG_STATS = [
 ] as const;
 
 const STAT_ROWS = [
-  { key: "ROLE", value: "Full-Stack Developer" },
-  { key: "STACK", value: "Django / Next.js / Three.js" },
-  { key: "FOCUS", value: "Web Apps / 3D Motion" },
+  { key: "ROLE", value: "Full-Stack AI Developer" },
+  { key: "STACK", value: "Django / Next.js / Gemini" },
+  { key: "FOCUS", value: "Web Apps / AI Features" },
   { key: "AVAILABILITY", value: "Open for work" },
   { key: "RESPONSE", value: "Under 24H" },
 ] as const;
@@ -26,20 +26,18 @@ export function HomeHero() {
 
         <h1 className="hero-title" id="hero-title">
           <span className="hero-title__outline">Full-Stack</span>
-          <span className="hero-title__solid">Developer</span>
+          <span className="hero-title__solid">AI Developer</span>
         </h1>
 
         <div className="hero-label">
           <span className="hero-label__rule" aria-hidden="true" />
-          <span className="hero-label__text">
-            | Django · Next.js · Three.js |
-          </span>
+          <span className="hero-label__text">| Django · Next.js · AI |</span>
           <span className="hero-label__rule" aria-hidden="true" />
         </div>
 
         <p className="hero-copy">
-          I build full-stack web apps from the database to the interface, and
-          I&apos;m learning to make them feel alive with motion and 3D.
+          I build full-stack web apps from the database to the interface, and add
+          AI features that make them smarter.
         </p>
       </div>
 

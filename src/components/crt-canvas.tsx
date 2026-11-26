@@ -16,7 +16,9 @@ import {
   WebGLRenderer,
 } from "three";
 
-const IMAGE_SRC = "/images/portrait-crt.webp";
+import { PORTRAIT_CRT } from "@/lib/assets";
+
+const IMAGE_SRC = PORTRAIT_CRT;
 
 const VERTEX_SHADER = /* glsl */ `
   varying vec2 vUv;

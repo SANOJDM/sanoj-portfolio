@@ -14,6 +14,7 @@ import {
   Vector2,
   WebGLRenderer,
 } from "three";
+import { PORTRAIT_CUTOUT, PORTRAIT_SAMPLE } from "@/lib/assets";
 import {
   ENTERED_EVENT,
   getTier,
@@ -23,7 +24,7 @@ import {
   type QualityTier,
 } from "@/lib/settings";
 
-const IMAGE_SRC = "/images/portrait-sample.webp";
+const IMAGE_SRC = PORTRAIT_SAMPLE;
 
 /**
  * The cutout is 1200x1607 and the person sits roughly between 15%-88% on the
@@ -108,7 +109,7 @@ function mulberry32(seed: number) {
 }
 
 async function loadBitmap(src: string) {
-  const response = await fetch(src, { cache: "force-cache" });
+  const response = await fetch(src, { cache: "default" });
   if (!response.ok) throw new Error(`Portrait request failed: ${response.status}`);
   const blob = await response.blob();
 
@@ -283,7 +284,7 @@ function buildPoints(prepared: Prepared, quality: QualityTier): BuiltPoints {
         1,
         Math.max(0, (luminanceAt(offset) - low) / (high - low)),
       );
-      if (normalized < 0.12) continue;
+      if (normalized < 0.05) continue;
       eligible += 1;
     }
   }
@@ -301,16 +302,17 @@ function buildPoints(prepared: Prepared, quality: QualityTier): BuiltPoints {
 
       const luminance = luminanceAt(offset);
       const normalized = Math.min(1, Math.max(0, (luminance - low) / (high - low)));
-      if (normalized < 0.12) continue;
+      if (normalized < 0.05) continue;
 
-      const lifted = Math.pow(normalized, 0.6);
+      const lifted = Math.pow(normalized, 0.5);
       const jitterX = (random() - 0.5) * step;
       const jitterY = (random() - 0.5) * step;
       const u = Math.min(1, Math.max(0, (px + jitterX) / sampleWidth));
       const v = Math.min(1, Math.max(0, (py + jitterY) / sampleHeight));
 
       positions.push((u - 0.5) * 2 * SOURCE_ASPECT, (0.5 - v) * 2, 0);
-      brightness.push(0.3 + lifted * 0.7);
+      // A low floor keeps the suit readable without flattening the face.
+      brightness.push(0.08 + lifted * 0.92);
       seeds.push(random());
       horizontal.push(u);
     }
@@ -563,7 +565,7 @@ export default function ParticlePortrait() {
       <canvas ref={canvasRef} className="particle-portrait__canvas" />
       {failed && (
         <Image
-          src="/images/portrait-cutout.png"
+          src={PORTRAIT_CUTOUT}
           alt=""
           fill
           sizes="(max-width: 640px) 92vw, (max-width: 1180px) 62vw, 38vw"

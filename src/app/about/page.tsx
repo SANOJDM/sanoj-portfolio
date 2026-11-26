@@ -2,17 +2,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactClock } from "@/components/contact-clock";
+import { PORTRAIT_CUTOUT } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "About — Sanoj",
   description:
-    "Sanoj is a full-stack developer from Chennai building web apps with Django, Flask, Next.js and Three.js.",
+    "Sanoj is a full-stack AI developer from Chennai building web apps with Django, Flask, Next.js and Gemini.",
 };
 
 const SKILLS = [
   "DJANGO",
   "FLASK",
   "NEXT.JS",
+  "GEMINI API",
+  "AI INTEGRATION",
   "THREE.JS",
   "PYTHON",
   "JAVASCRIPT",
@@ -36,10 +39,10 @@ export default function AboutPage() {
 
       <div className="about-portrait">
         <Image
-          src="/images/portrait-cutout.png"
+          src={PORTRAIT_CUTOUT}
           alt="Portrait of Sanoj"
-          width={1200}
-          height={1607}
+          width={1792}
+          height={2400}
           priority
           sizes="(max-width: 900px) 140vw, 720px"
           className="about-portrait__img"
@@ -56,7 +59,7 @@ export default function AboutPage() {
         </p>
 
         <p className="about-lede">
-          Full-stack developer, working from the database to the screen.
+          Full-stack AI developer, working from the database to the screen.
         </p>
 
         <h2 className="about-heading">
@@ -67,14 +70,14 @@ export default function AboutPage() {
 
         <div className="about-copy">
           <p>
-            I&apos;m a BCA student from Chennai who builds full-stack web apps. I
-            work with Django and Flask on the back end and Next.js on the front
-            end.
+            I&apos;m a BCA student from Chennai who builds full-stack web apps and
+            adds AI to them. I work with Django and Flask on the back end and
+            Next.js on the front end.
           </p>
           <p>
-            Lately I&apos;ve been learning to make interfaces feel alive with
-            motion, shaders and 3D using Three.js. This site is part of that
-            practice.
+            I use AI APIs like Google&apos;s Gemini to add features that understand
+            text and images, and I use Three.js to make interfaces feel alive.
+            This site is part of that practice.
           </p>
           <p>
             I like projects where I can take an idea from the database all the

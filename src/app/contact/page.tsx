@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = {
   title: "Contact — Sanoj",
   description:
-    "Start a project with Sanoj, a full-stack developer in Chennai. Tell me what you're building and I'll reply within 24 hours.",
+    "Start a project with Sanoj, a full-stack AI developer in Chennai. Tell me what you're building and I'll reply within 24 hours.",
 };
 
 export default function ContactPage() {

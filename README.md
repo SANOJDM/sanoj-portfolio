@@ -1,4 +1,4 @@
-# Sanoj — Full-Stack Developer
+# Sanoj — Full-Stack AI Developer
 
 Personal portfolio: a single dark, motion-led site with a particle portrait, an
 optional CRT portrait, project index, about page, and a working contact form.
@@ -12,6 +12,7 @@ optional CRT portrait, project index, about page, and a working contact form.
 | Styling    | Tailwind CSS 4 + a hand-written design system in `globals.css` |
 | 3D / shader| Three.js (particle portrait, CRT post-process)                |
 | Motion     | GSAP, CSS transitions, Web Audio for UI clicks                |
+| AI         | Google Gemini API (multimodal features)                       |
 | Fonts      | Bebas Neue, Space Mono, Inter via `next/font/google`          |
 | Forms      | Web3Forms (client `fetch`, no backend)                        |
 

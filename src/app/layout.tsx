@@ -38,10 +38,11 @@ export const metadata: Metadata = {
   creator: "Sanoj",
   keywords: [
     "Sanoj",
-    "full-stack developer",
+    "full-stack AI developer",
     "Next.js",
     "Django",
-    "Three.js",
+    "Gemini",
+    "AI integration",
     "portfolio",
     "Chennai",
   ],
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Sanoj — Full-Stack Developer",
+        alt: "Sanoj — Full-Stack AI Developer",
       },
     ],
   },
@@ -79,7 +80,7 @@ const personJsonLd = {
   name: "Sanoj",
   url: SITE_URL,
   image: `${SITE_URL}/og.png`,
-  jobTitle: "Full-Stack Developer",
+  jobTitle: "Full-Stack AI Developer",
   email: "mailto:vamsisanoj04@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -90,7 +91,7 @@ const personJsonLd = {
     "https://www.linkedin.com/in/sanoj-d-m-8a012a419/",
     "https://github.com/SANOJDM",
   ],
-  knowsAbout: ["Next.js", "Django", "Flask", "Three.js"],
+  knowsAbout: ["Next.js", "Django", "Flask", "Gemini API", "AI integration"],
 };
 
 export const viewport: Viewport = {

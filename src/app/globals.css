@@ -759,8 +759,8 @@ main {
     auto,
     4px 4px,
     auto;
-  -webkit-mask-image: url("/images/portrait-crt.webp");
-  mask-image: url("/images/portrait-crt.webp");
+  -webkit-mask-image: url("/images/portrait-crt.webp?v=2");
+  mask-image: url("/images/portrait-crt.webp?v=2");
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
@@ -2056,7 +2056,7 @@ a.project-row__case:hover {
   max-width: none;
   height: auto;
   transform: translateX(-50%);
-  filter: grayscale(1) contrast(1.05) brightness(0.78);
+  filter: grayscale(1) contrast(1.06) brightness(0.92);
 }
 
 /* Scanlines sit on the figure; on the black surround they disappear. */
@@ -3069,7 +3069,7 @@ html.has-custom-cursor select {
 
   /* A photo is denser than the point cloud, so it sits back a little further. */
   .home-portrait[data-variant="crt"] {
-    opacity: 0.34;
+    opacity: 0.3;
   }
 }
 
