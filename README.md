@@ -3,6 +3,8 @@
 Personal portfolio: a single dark, motion-led site with a particle portrait, an
 optional CRT portrait, project index, about page, and a working contact form.
 
+**Live:** https://sanoj-portfolio-coral.vercel.app
+
 ## Stack
 
 | Layer      | Choice                                                        |
